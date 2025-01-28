@@ -2,7 +2,7 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-
+import argparse
 
 
 
@@ -17,14 +17,14 @@ def load_data():
 
 
 def train(data, criterion, max_depth):
-   print(“Training a DecisionTreeClassifier”)
+   print("Training a DecisionTreeClassifier")
 
 
-   print(“Unpacking training and evaluation data…”)
+   print("Unpacking training and evaluation data…")
    X_train, X_test, y_train, y_test = data
 
 
-   print(“Instantiating model…”)
+   print("Instantiating model…")
    model_parameters = {
        "criterion": criterion,
        "splitter": "best",
